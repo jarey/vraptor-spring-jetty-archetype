@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype>
+	<id>vraptor-spring-jetty-archetype</id>
+	<resources>
+		<resource>src/main/resources/META-INF/persistence.xml</resource>
+		<resource>src/main/resources/applicationContext.xml</resource>
+		<resource>src/main/resources/applicationDAOContext.xml</resource>
+		<resource>src/main/resources/log4j.properties</resource>
+		<resource>src/main/resources/messages.properties</resource>
+		<resource>src/main/webapp/index.jsp</resource>
+		<resource>src/main/webapp/WEB-INF/jetty-env.xml</resource>
+		<resource>src/main/webapp/WEB-INF/web.xml</resource>
+	</resources>
+</archetype>
