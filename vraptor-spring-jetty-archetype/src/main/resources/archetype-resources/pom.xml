@@ -8,11 +8,15 @@
 	<name>${artifactId} Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<junit-version>4.8.2</junit-version>
-		<hibernate-version>4.0.1.Final</hibernate-version>
-		<hibernate-validator-version>4.2.0.Final</hibernate-validator-version>
-		<spring-version>3.1.1.RELEASE</spring-version>
-		<vraptor-version>3.4.0</vraptor-version>
+		<junit.version>4.8.2</junit.version>
+		<mockito.version>1.9.0</mockito.version>
+		<dbunit.version>2.2</dbunit.version>
+		<hibernate.version>4.0.1.Final</hibernate.version>
+		<hibernate-validator.version>4.2.0.Final</hibernate-validator.version>
+		<c3p0.version>0.9.1.2</c3p0.version>
+		<spring.version>3.1.1.RELEASE</spring.version>
+		<vraptor.version>3.4.0</vraptor.version>
+		<aspectj.version>1.5.4</aspectj.version>
 	</properties>
 
 	<repositories>
@@ -56,7 +60,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>${junit-version}</version>
+			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -64,7 +68,7 @@
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>
-			<version>1.9.0</version>
+			<version>${mockito.version}</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -72,7 +76,7 @@
 		<dependency>
 			<groupId>dbunit</groupId>
 			<artifactId>dbunit</artifactId>
-			<version>2.2</version>
+			<version>${dbunit.version}</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -80,137 +84,138 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>${hibernate-version}</version>
+			<version>${hibernate.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>${hibernate-version}</version>
+			<version>${hibernate.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
-			<version>${hibernate-validator-version}</version>
+			<version>${hibernate-validator.version}</version>
 		</dependency>
 
-
+		<!-- C3p0 -->
 		<dependency>
 			<groupId>c3p0</groupId>
 			<artifactId>c3p0</artifactId>
-			<version>0.9.1.2</version>
+			<version>${c3p0.version}</version>
 		</dependency>
 
 		<!-- Spring Framework -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
-			<version>${spring-version}</version>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-asm</artifactId>
-			<version>${spring-version}</version>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
-			<version>${spring-version}</version>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>${spring-version}</version>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
-			<version>${spring-version}</version>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>${spring-version}</version>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-expression</artifactId>
-			<version>${spring-version}</version>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
-			<version>${spring-version}</version>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
-			<version>${spring-version}</version>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
-			<version>${spring-version}</version>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-oxm</artifactId>
-			<version>${spring-version}</version>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
-			<version>${spring-version}</version>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>${spring-version}</version>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc-portlet</artifactId>
-			<version>${spring-version}</version>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
-			<version>${spring-version}</version>
+			<version>${spring.version}</version>
 			<scope>test</scope>
 		</dependency>
 
+		<!-- AspectJ -->
 		<dependency>
 			<groupId>aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
-			<version>1.5.4</version>
+			<version>${aspectj.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>aspectj</groupId>
 			<artifactId>aspectjweaver</artifactId>
-			<version>1.5.4</version>
+			<version>${aspectj.version}</version>
 		</dependency>
 
 		<!-- VRaptor -->
 		<dependency>
 			<groupId>br.com.caelum</groupId>
 			<artifactId>vraptor</artifactId>
-			<version>${vraptor-version}</version>
+			<version>${vraptor.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.hibernate</groupId>
@@ -406,6 +411,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.0.2</version>
 				<configuration>
+					<compilerVersion>1.6</compilerVersion>
 					<source>1.6</source>
 					<target>1.6</target>
 				</configuration>
